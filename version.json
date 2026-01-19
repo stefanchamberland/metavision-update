@@ -1,0 +1,7 @@
+{
+  "version": "1.0.1",
+  "files": {
+    "windows": "MetaVision-update-win.zip",
+    "macos_arm": "MetaVision-update-mac-arm.zip"
+  }
+}
