@@ -1,7 +1,14 @@
 {
   "version": "2.5.0",
   "files": {
-    "windows": "_dB-DAM-2.5.0-Windows-x64-Setup.zip",
-    "macos_arm": "_dB-DAM-mac-arm-2.5.0.zip"
-  }
+    "macos_arm": {
+      "file": "_dB-DAM-mac-arm-2.5.0.zip",
+      "sha256": "3c5f39bfbb648abfac7e0599e9981adc89b46eb70e2c747401ea890182a8a992"
+    },
+    "windows": {
+      "file": "_dB-DAM-2.5.0-Windows-x64-Setup.zip",
+      "sha256": "a578f8be1de087edc5f5c2eaf8a0da6aa3aebab60d32c9f993185aa5d81c0e8d"
+    }
+  },
+  "notes": "MetaVision is now _dB DAM\nIt's the same app with a new name. Your libraries, saved jobs, settings and license carry over automatically. Once the new version is working, you can delete the old MetaVision app.\n\nImportant fix: check multitrack videos\nEarlier versions could keep only one audio track when embedding metadata into a clip with several audio tracks. This is now fixed, and every track and timecode are kept.\n\n- If you embedded into copies: your originals are fine. Re-create any multitrack copies from your source files.\n- If you used \"Overwrite original assets\" on multitrack clips: check those files against your backups, because the extra tracks were removed from the originals.\n\nClips with a single audio track and photos were not affected.\n\nNew\n- AI titles: each analysis now writes a readable title, used for embedded metadata, export title fields and alt text, whichever filename option you choose. Files analyzed with an earlier version use the first sentence of their description until you reprocess them.\n- Embedding progress: embedding runs in the background with a progress window showing the current file and a Cancel button.\n- Remove from the library: highlight one or more rows, then press Delete, right-click or use the Remove button. Undo is offered right away, and your files are never touched.\n- Clear jobs: remove saved processing jobs from the Jobs window. Your libraries are kept.\n- Recommended models: the model browser now stars Gemma 4 E4B as a starting point and Gemma 4 12B for more detail.\n- What's new and Legal: these notes, the license agreement and open-source notices are in Settings.\n\nImproved\n- MXF files are never rewritten: copies stay byte-identical and metadata goes in a same-named .xmp sidecar. Overwrite mode leaves MXF originals untouched.\n- Sidecars for MKV, WebM and AVI, alongside their container tags.\n- Safer overwrite: an original is kept if any of its tracks could not be preserved.\n\nFixed\n- Qwen3.5 9B now works. It previously failed on every file.\n- Importing no longer stops partway if Return is pressed while it runs, and one unreadable file no longer stops the files after it.\n- Windows: scan results now appear reliably in the library table, and library archives export correctly.\n\nChanged\n- New license agreement: you will be asked to accept it once. It states the one-year license term and the 30-day money-back guarantee.\n- Gemini notice: Settings now explains that analyzed images are sent to Google and summarizes the terms that apply.\n- Gemma 3 4B is no longer offered for download. An installed copy keeps working.\n- Video tools updated: FFmpeg was replaced with a new build, and OpenCV was removed."
 }
